@@ -2,9 +2,11 @@ NAME	:= PhoneBook
 
 CC	:=	c++
 
-CFLAGS	:= -Wall -Wextra -Werror -std=c++98
+CFLAGS	:= -Wall -Wextra -Werror -std=c++98 -D BONUS
 
 SRCS	:= PhoneBook.cpp \
+		   Contact.cpp \
+		   main.cpp \
 
 BUILD	:= .objs
 
