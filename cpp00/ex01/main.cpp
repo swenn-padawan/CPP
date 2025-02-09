@@ -6,19 +6,16 @@ int	main(void)
 {
 	std::string line;
 	PhoneBook	Phonebook;	
-	Phonebook.print_menu();
-	std::cout << "Please Enter The First Name:" << std::endl;
-	std::getline (std::cin, line);
 	while (1)
 	{
+		Phonebook.print_menu();
+		std::getline (std::cin, line);
 		if (line.empty()){
 			std::cout << "Error!: < You Cannot Enter an Empty String >" << std::endl;
 			continue ;
 		}
-		else if (std::cin.eof())
-			std::cout << "Nice Try\n" << std::endl;
 		else if (line == "ADD")
-			Phonebook.Add(line);
+			Phonebook.Add();
 		else if (line == "SEARCH")
 			Phonebook.Search();
 		else if(line == "EXIT")
