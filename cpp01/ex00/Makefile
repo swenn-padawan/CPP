@@ -1,11 +1,10 @@
-NAME	:= Account
+NAME	:= PhoneBook
 
 CC	:=	c++
 
-CFLAGS	:= -Wall -Wextra -Werror -std=c++98
+CFLAGS	:= -Wall -Wextra -Werror -std=c++98 -D BONUS
 
-SRCS	:= Account.cpp \
-		   tests.cpp \
+SRCS	:= Zombie.cpp \
 
 BUILD	:= .objs
 
@@ -23,7 +22,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $@
-	@echo " $(GREEN)$(BOLD)$(ITALIC)■$(RESET)  building	$(GREEN)$(BOLD)$(ITALIC)$(NAME)$(RESET)"
+	@echo " $(GREEN)$(BOLD)$(ITALIC)■$(RESET)  building	$(GREEN)$(BOLD)$(ITALIC)$(NAME)$(RESET)" $@
 
 $(BUILD)/%.o: %.cpp
 	@$(DIR_UP)
