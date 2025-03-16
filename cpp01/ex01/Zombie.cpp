@@ -6,7 +6,7 @@
 /*   By: stetrel <stetrel@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:23:31 by stetrel           #+#    #+#             */
-/*   Updated: 2025/03/05 19:57:10 by stetrel          ###   ########.fr       */
+/*   Updated: 2025/03/06 16:20:28 by stetrel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Zombie::Zombie(void)
 {
+	this->name = "";
 	std::cout << "A Zombie" << " has been created !" << std::endl;
 }
 

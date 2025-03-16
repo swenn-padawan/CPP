@@ -1,14 +1,10 @@
-NAME	:= Zombie
+NAME	:= brains
 
-CC	:=	c++
+CC	:=	clang++
 
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
-SRCS	:= Zombie.cpp \
-		   newZombie.cpp \
-		   randomChump.cpp \
-		   main.cpp \
-
+SRCS	:= *.cpp
 
 BUILD	:= .objs
 
