@@ -7,13 +7,13 @@ HumanB::HumanB(std::string name) :_weapon(NULL)
 
 HumanB::~HumanB( void ){}
 
-void	HumanB::setWeapon(Weapon weapon)
+void	HumanB::setWeapon(Weapon &weapon)
 {
-	_weapon = weapon;
+	_weapon = &weapon;
 }
 
 void	HumanB::attack( void )
 {
-	std::cout << _name << " attack with their " << this->_weapon.getType()  << std::endl;
+	std::cout << _name << " attack with their " << this->_weapon->getType()  << std::endl;
 }
 
