@@ -6,13 +6,24 @@
 #define RESET "\x1b[0m"
 #define GREEN "\x1b[32m"
 
+void	ft_replace(std::string &line, const std::string &replace, const std::string &by)
+{
+	size_t pos = 0;
+	while ((pos = line.find(replace, pos)) != std::string::npos)
+	{
+		line.erase(pos, replace.length());
+		line.insert(pos, by);
+		pos += by.length();
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	if (argc != 4){
 		std::cout << "WOMP WOMP" << std::endl;
 		return (2);
 	}
-	std::fstream	fd;
+	std::ifstream	fd;
 	fd.open(argv[1], std::fstream::in);
 	if (!fd){
 		std::cout << RED << "The File Don't Exist OR I Don't Have The Permissions To Open It !" << RESET << std::endl;
@@ -20,12 +31,10 @@ int	main(int argc, char **argv)
 	}
 	std::cout << GREEN << "File Open Succesfully" << RESET << std::endl;
 	std::string line;
-	std::ofstream outfile("outfile");
+	std::string filename = std::string(argv[1]) + ".replace";
+	std::ofstream outfile(filename.c_str());
 	while (std::getline(fd, line)){
-		if (line != argv[2])
-			outfile << line;
-		std::cout << "line = " << line << " argv[2] = " << argv[3] << std::endl;
-		//else
-		 //outfile << argv[3];
+		ft_replace(line, argv[2], argv[3]);
+		outfile << line;
 	}
 }
