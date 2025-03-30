@@ -9,6 +9,8 @@
 void	ft_replace(std::string &line, const std::string &replace, const std::string &by)
 {
 	size_t pos = 0;
+	if (replace.empty() || by.empty())
+		return ;
 	while ((pos = line.find(replace, pos)) != std::string::npos)
 	{
 		line.erase(pos, replace.length());
@@ -35,6 +37,6 @@ int	main(int argc, char **argv)
 	std::ofstream outfile(filename.c_str());
 	while (std::getline(fd, line)){
 		ft_replace(line, argv[2], argv[3]);
-		outfile << line;
+		outfile << line << "\n";
 	}
 }
