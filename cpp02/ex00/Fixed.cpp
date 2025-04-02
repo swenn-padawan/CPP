@@ -13,13 +13,14 @@ Fixed::~Fixed( void ){
 	std::cout << "Default destructor called" << std::endl;
 }
 
-Fixed& Fixed::operator=( const Fixed &fixed ){
+Fixed& Fixed::operator = ( Fixed const &fixed ){
 	std::cout << "Copy assignement operator called" << std::endl;
-	this->value = fixed.value;
+	if (this != &fixed)
+		value = fixed.getRawBits();
 	return (*this);
 }
 
-int	Fixed::getRawBits( void ){
+int	Fixed::getRawBits( void ) const{
 	std::cout << "getRawBits function called" << std::endl;
 	return (value);
 }

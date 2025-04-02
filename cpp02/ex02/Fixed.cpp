@@ -16,6 +16,7 @@ Fixed::Fixed( const float value ){
 }
 
 Fixed::Fixed(const Fixed &fixed){
+	std::cout << "Copy Constructor Called" << std::endl;
 	*this = fixed;
 }
 
@@ -52,15 +53,15 @@ Fixed Fixed::operator - (const Fixed& fixed) const {
 Fixed Fixed::operator * (const Fixed& fixed) const {
 	Fixed	result;
 
-	result.value = this->value * fixed.value;
+	result.value = (this->value * fixed.value) >> bits;
 	return (result);
 }
 
 Fixed Fixed::operator / (const Fixed& fixed) const {
 	Fixed	result;
 
-	result.value = this->value / fixed.value;
-	return (result.toFloat() / fixed.toFloat());
+	result.value = (this->value << bits) / fixed.value;
+	return (result);
 }
 
 bool Fixed::operator > (const Fixed& fixed) const{
@@ -98,13 +99,13 @@ Fixed& Fixed::operator ++ ( void ){
 }
 
 Fixed Fixed::operator -- ( int ){
-	Fixed old;
+	Fixed old(*this);
 	value--;
 	return (old);
 }
 
 Fixed Fixed::operator ++ ( int ){
-	Fixed old;
+	Fixed old(*this);
 	value++;
 	return (old);
 }
