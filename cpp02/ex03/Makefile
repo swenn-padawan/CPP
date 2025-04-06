@@ -1,12 +1,13 @@
-NAME	:= Fixed
+NAME	:= bsp
 
 CC	:=	c++
 
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 SRCS	:= Fixed.cpp \
+		   Point.cpp \
+		   bsp.cpp \
 		   main.cpp \
-
 
 BUILD	:= .objs
 

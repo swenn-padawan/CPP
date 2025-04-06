@@ -3,21 +3,19 @@
 
 class Point{
 	private:
-		const Fixed x;
-		const Fixed y;
+		const Fixed _x;
+		const Fixed _y;
 	public:
 		Point();
 		Point(const Point &point);
-		Point(float x, float y);
+		Point(const Fixed x, const Fixed y);
 		~Point();
 
-		Fixed& operator = (const Fixed& fixed);
+		Point& operator=( Point const & );
 
 		const Fixed getX( void );
 		const Fixed getY( void );
 		void		setX( const Fixed x );
 		void		setY( const Fixed y );
 };
-
 // pour la fonction regarder la video sur la rasterisation
-bool bsp( Point const a, Point const b, Point const c, Point const point);
