@@ -1,9 +1,9 @@
 #include "FragTrap.hpp"
 
-class DiamondTrap: public FragTrap, public ScavTrap{
+class DiamondTrap: public ScavTrap, public FragTrap{
 	public:
 		DiamondTrap();
-		DiamondTrap(std::string name);
+		DiamondTrap(const std::string name);
 		DiamondTrap(const DiamondTrap &copy);
 		~DiamondTrap();
 		DiamondTrap &operator=(const DiamondTrap &diamondTrap);

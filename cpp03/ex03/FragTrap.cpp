@@ -26,6 +26,7 @@ FragTrap& FragTrap::operator=(const FragTrap &fragtrap){
 	this->hitPoints = fragtrap.hitPoints;
 	this->energyPoints = fragtrap.energyPoints;
 	this->attackDamage = fragtrap.attackDamage;
+	this->name = fragtrap.name;
 	return (*this);
 }
 

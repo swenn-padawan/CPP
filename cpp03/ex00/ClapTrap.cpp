@@ -17,6 +17,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &claptrap){
 	this->hitPoints = claptrap.hitPoints;
 	this->energyPoints = claptrap.energyPoints;
 	this->attackDamage = claptrap.attackDamage;
+	this->name = claptrap.name;
 	return (*this);
 }
 

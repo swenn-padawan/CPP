@@ -1,11 +1,12 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name): hitPoints(100), energyPoints(50), attackDamage(20){
-	std::cout << "ClapTrap Constructor has been called" << std::endl;
-	this->name = name;
+ClapTrap::ClapTrap(std::string _name): hitPoints(100), energyPoints(50), attackDamage(20){
+	name = _name;
 }
 
-ClapTrap::ClapTrap(): name("undefined"), hitPoints(100), energyPoints(50), attackDamage(20){};
+ClapTrap::ClapTrap(): name("undefined"), hitPoints(100), energyPoints(50), attackDamage(20){
+	std::cout << "Default ClapTrap constructor called" << std::endl;
+};
 
 ClapTrap::ClapTrap(const ClapTrap &copy){
 	*this = copy;
@@ -43,9 +44,9 @@ void ClapTrap::takeDamage(unsigned int amount){
 	}
 	std::cout << RED << this->name << " has taken " << amount << " of damage" << std::endl;
 	this->hitPoints -= amount;
-	std::cout << this->name << " have now " << this->hitPoints <<" Hit Points" << std::endl;
+	std::cout << this->name << " have now " << this->hitPoints <<" Hit Points" << RESET << std::endl;
 	if (this->hitPoints <= 0)
-		std::cout << this->name << " Died !" << RESET <<std::endl;
+		std::cout << GRAY << this->name << " Died !" << RESET <<std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount){

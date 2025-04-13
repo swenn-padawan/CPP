@@ -6,7 +6,7 @@
 /*   By: stetrel <stetrel@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:52:47 by stetrel           #+#    #+#             */
-/*   Updated: 2025/04/12 16:17:39 by stetrel          ###   ########.fr       */
+/*   Updated: 2025/04/13 13:13:34 by stetrel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &scavtrap){
 	this->hitPoints = scavtrap.hitPoints;
 	this->energyPoints = scavtrap.energyPoints;
 	this->attackDamage = scavtrap.attackDamage;
+	this->name = scavtrap.name;
 	return (*this);
 }
 

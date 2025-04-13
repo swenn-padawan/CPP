@@ -7,7 +7,7 @@ int main()
 		
 	diamant.whoAmI();
 	undefined.whoAmI();
-/*	diamant.attack("cible");
+	diamant.attack("cible");
 	diamant.beRepaired(80);
 	diamant.guardGate();
 	diamant.highFivesGuys();
@@ -20,5 +20,5 @@ int main()
 	undefined.beRepaired(80);
 	undefined.guardGate();
 	undefined.highFivesGuys();
-	undefined.takeDamage(90);*/
+	undefined.takeDamage(90);
 }

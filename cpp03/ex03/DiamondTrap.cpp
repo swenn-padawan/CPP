@@ -1,17 +1,18 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap( void ): ClapTrap(), FragTrap(), ScavTrap(), name("undefined"){
+DiamondTrap::DiamondTrap( void ): ClapTrap("clap_name"), ScavTrap(), FragTrap(), name("undefined"){
 	hitPoints = FragTrap::hitPoints;
 	energyPoints = ScavTrap::energyPoints;
 	attackDamage = FragTrap::attackDamage;
 }
 
-DiamondTrap::DiamondTrap( const std::string _name )
-	: ClapTrap(_name + "_clap_name"),
-	FragTrap(),
+DiamondTrap::DiamondTrap( const std::string _name ): ClapTrap(),
 	ScavTrap(),
+	FragTrap(),
 	name(_name)
 {
+	ClapTrap::name = _name + "_clap_name";
+	std::cout << "ClapTrap Name = " << ClapTrap::name << std::endl;
 	hitPoints = FragTrap::hitPoints;
 	energyPoints = ScavTrap::energyPoints;
 	attackDamage = FragTrap::attackDamage;

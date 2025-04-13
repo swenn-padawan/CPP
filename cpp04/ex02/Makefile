@@ -1,13 +1,15 @@
-NAME	:= DiamondTrap
+NAME	:= Animal
 
 CC	:=	c++
 
-CFLAGS	:= -Wall -Wextra -Werror -std=c++98 -g
+CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
-SRCS	:= ClapTrap.cpp \
-		   ScavTrap.cpp \
-		   FragTrap.cpp \
-		   DiamondTrap.cpp \
+SRCS	:= Animal.cpp \
+		   Dog.cpp \
+		   Cat.cpp \
+		   WrongAnimal.cpp \
+		   WrongCat.cpp \
+		   Brain.cpp \
 		   main.cpp \
 
 BUILD	:= .objs
