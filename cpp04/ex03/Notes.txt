@@ -1,0 +1,8 @@
+Notes pour AMateria parce que ca n'a aucuns sens
+
+clone() une Ice Materia donne une nouvelle Ice Materia
+
+L'operator = ne doit pas copier le type de Materia (dit dans le sujet explication)
+
+
+

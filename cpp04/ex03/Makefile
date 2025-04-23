@@ -4,11 +4,10 @@ CC	:=	c++
 
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
-SRCS	:= Animal.cpp \
-		   Dog.cpp \
-		   Cat.cpp \
-		   WrongAnimal.cpp \
-		   WrongCat.cpp \
+SRCS	:= AMateria.cpp \
+		   Ice.cpp \
+		   Cure.cpp \
+		   Interface.cpp \
 		   main.cpp \
 
 BUILD	:= .objs
