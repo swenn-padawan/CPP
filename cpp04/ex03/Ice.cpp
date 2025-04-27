@@ -1,19 +1,17 @@
 #include "Ice.hpp"
+#include "Amateria.hpp"
 
-Ice::Ice( void ){
+Ice::Ice( void ): AMateria(){
 	type = "ice";
 }
 
-Ice::Ice(std::string const & type){
-	this->type = "ice";
-}
-
-Ice::Ice(const Ice & copy){
+Ice::Ice(const Ice & copy): AMateria(){
 	*this = copy;
 }
 
 Ice &Ice::operator=(const Ice &src){
 	std::cout << "Assigning an Ice to another doesn't make sense" << std::endl;
+	(void)src;
 	return (*this);
 }
 

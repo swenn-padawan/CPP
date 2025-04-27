@@ -10,7 +10,7 @@ class AMateria{
 		AMateria &operator=(const AMateria &src);
 		virtual ~AMateria();
 
-		std::string const & getType() const; //return the AMateria type.
+		std::string const & getType() const;
 		void				setType(const std::string type);
  
 		virtual AMateria* clone() const = 0;

@@ -27,3 +27,8 @@ void	AMateria::setType(const std::string _type){
 	this->type = _type;
 }
 
+void AMateria::use(ICharacter& target) {
+    // Default behavior, should be overridden by derived classes
+    std::cout << "AMateria use on " << target.getName() << std::endl;
+}
+

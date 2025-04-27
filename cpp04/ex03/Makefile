@@ -4,7 +4,8 @@ CC	:=	c++
 
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
-SRCS	:= AMateria.cpp \
+SRCS	:= Amateria.cpp \
+		   IMateriaSource.cpp \
 		   Ice.cpp \
 		   Cure.cpp \
 		   Interface.cpp \
