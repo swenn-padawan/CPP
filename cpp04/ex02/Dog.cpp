@@ -10,13 +10,15 @@ Dog::~Dog( void ){
 	delete brain;
 }
 
-Dog::Dog( const Dog &dog ){
+Dog::Dog( const Dog &dog ): Animal(){
 	std::cout << "Copy constructor called (DOG)" << std::endl;
+	brain = new Brain(*dog.brain);
 	type = dog.type;
 }
 
 Dog& Dog::operator=(const Dog &dog){
 	type = dog.type;
+	*brain = *dog.brain;
 	return (*this);
 }
 
@@ -26,6 +28,10 @@ void	Dog::setType(const std::string _type){
 
 std::string	Dog::getType( void ){
 	return (type);
+}
+
+Brain*	Dog::getBrains(){
+	return (this->brain);
 }
 
 void	Dog::makeSound( void ) const {

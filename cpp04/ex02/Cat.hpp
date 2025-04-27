@@ -10,6 +10,7 @@ class Cat: public Animal{
 		void		setType(const std::string _type);
 		std::string	getType( void );
 
+		Brain	*getBrain(void);
 		void	makeSound( void ) const;
 
 	private:
