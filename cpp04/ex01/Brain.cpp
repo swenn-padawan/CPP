@@ -6,7 +6,9 @@ Brain::Brain( void ){
 		ideas[i] = "Ceci est une idee\n";
 }
 
-Brain::~Brain( void ){}
+Brain::~Brain( void ){
+	std::cout << "Destructor called (BRAINS)" << std::endl;
+}
 
 Brain::Brain( const Brain &brain ){
 	std::cout << "Copy constructor called (BRAINS)" << std::endl;
