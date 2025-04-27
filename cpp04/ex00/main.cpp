@@ -19,7 +19,7 @@ int main()
 	
 	const WrongAnimal* wrong = new WrongAnimal();
 	wrong->makeSound();
-	const WrongAnimal* wrongCat = new WrongCat();
+	const WrongCat* wrongCat = new WrongCat();
 	wrongCat->makeSound();
 
 	delete wrong;
