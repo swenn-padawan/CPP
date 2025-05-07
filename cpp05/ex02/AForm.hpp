@@ -47,6 +47,7 @@ class AForm{
 		bool				isSigned;
 		const int			gradeRequiredToSign;
 		const int			gradeRequiredToExec;
+		virtual void		Action() const = 0;
 };
 
 std::ostream& operator<<(std::ostream& os, const AForm& obj);

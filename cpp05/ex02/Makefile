@@ -5,8 +5,8 @@ CC	:=	c++
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 SRCS	:= Bureaucrat.cpp \
-		   Exception.cpp \
-		   Form.cpp \
+		   ShrubberyCreationForm.cpp \
+		   AForm.cpp \
 		   main.cpp \
 
 BUILD	:= .objs

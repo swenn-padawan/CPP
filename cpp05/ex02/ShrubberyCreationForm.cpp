@@ -29,7 +29,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 }
 
 
-void	ShrubberyCreationForm::printTree(){
+void	ShrubberyCreationForm::Action() const{
 	std::fstream outfile ((_filename + std::string("_shrubbery")).c_str());
 
 	if (outfile){

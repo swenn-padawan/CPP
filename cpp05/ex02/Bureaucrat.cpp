@@ -57,8 +57,31 @@ void Bureaucrat::signForm(AForm &form) const {
 	}
 }
 
+void Bureaucrat::executeForm(const AForm &form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << _name << " executed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}	
+}
+
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& man){
 	std::cout << man.getName() << ", bureaucrat grade " << man.getGrade() << std::endl;
 	return (os);
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("Grade too high!");
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("Grade too low!");
 }
 

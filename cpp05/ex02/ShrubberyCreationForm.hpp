@@ -17,6 +17,6 @@ class ShrubberyCreationForm: public AForm{
 		};
 
 	private:
-		void		printTree();
-		std::string	_filename;
+		virtual	void		Action() const;
+		std::string			_filename;
 };
