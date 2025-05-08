@@ -6,6 +6,8 @@ CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 SRCS	:= Bureaucrat.cpp \
 		   ShrubberyCreationForm.cpp \
+		   RobotomyRequestForm.cpp \
+		   PresidentialPardonForm.cpp \
 		   AForm.cpp \
 		   main.cpp \
 
@@ -33,7 +35,7 @@ $(BUILD)/%.o: %.cpp
 	@$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-	@$(RM) $(BUILD)
+	@$(RM) $(BUILD) Home_shrubbery
 
 fclean: clean
 	@$(RM) $(NAME)

@@ -30,7 +30,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 
 void	ShrubberyCreationForm::Action() const{
-	std::fstream outfile ((_filename + std::string("_shrubbery")).c_str());
+	std::ofstream outfile (_filename + "_shrubbery");
 
 	if (outfile){
 		outfile << "       &&& &&  & &&\n";
