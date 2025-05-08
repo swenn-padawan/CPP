@@ -15,7 +15,7 @@ class AForm{
 		AForm(const std::string &name, int gradeSign, int gradeExec);
 		AForm(const AForm &copy);
 		AForm &operator=(const AForm &src);
-		virtual	~AForm();
+		virtual ~AForm();
 
 		const std::string &getName() const;
 		bool	getIsSigned() const;
