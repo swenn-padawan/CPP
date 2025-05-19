@@ -1,5 +1,7 @@
 #pragma once
 
+# define UNUSED(x) ((void)x)
+
 #include <iostream>
 
 class ScalarConverter{
@@ -8,7 +10,7 @@ class ScalarConverter{
 		ScalarConverter(const ScalarConverter& copy);
 		ScalarConverter &operator=(const ScalarConverter &src);
 
-		void	convert(const std::string toConvert);
+		static void	convert(const std::string &toConvert);
 
 	private:
 		ScalarConverter(){};
