@@ -19,7 +19,7 @@ void separator(const std::string& title) {
 }
 
 bool checkFileCreatedAndFilled(const std::string& filename) {
-	std::ifstream file(filename);
+	std::ifstream file(filename.c_str());
 	if (!file.is_open()) return false;
 
 	std::string line;

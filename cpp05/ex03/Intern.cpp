@@ -20,8 +20,8 @@ AForm* Intern::makeForm(const std::string& formName, const std::string& target) 
     }
     else {
         std::cout << "Intern: Form not recognized!" << std::endl;
-        return nullptr;
     }
+	return(0);
 }
 
 AForm* Intern::createShrubberyCreationForm(const std::string& target) const {
