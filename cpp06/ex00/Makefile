@@ -1,10 +1,10 @@
-NAME	:= Scalar
+NAME	?= Scalar
 
 CC	:=	c++
 
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
-SRCS	:= ScalarConverter.cpp \
+SRCS	?= ScalarConverter.cpp \
 		   main.cpp \
 
 
@@ -24,11 +24,11 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $@
-	@printf " $(GREEN)$(BOLD)$(ITALIC)■$(RESET)  building	$(GREEN)$(BOLD)$(ITALIC)$(NAME)$(RESET)"
+	@printf " $(GREEN)$(BOLD)$(ITALIC)■$(RESET)  building	$(GREEN)$(BOLD)$(ITALIC)$(NAME)$(RESET)\n"
 
 $(BUILD)/%.o: %.cpp
 	@$(DIR_UP)
-	@printf " $(CYAN)$(BOLD)$(ITALIC)■$(RESET)  compiling	$(GRAY)$(BOLD)$(ITALIC)$^$(RESET)"
+	@printf " $(CYAN)$(BOLD)$(ITALIC)■$(RESET)  compiling	$(GRAY)$(BOLD)$(ITALIC)$^$(RESET)\n"
 	@$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:

@@ -2,12 +2,16 @@
 #include "Array.hpp"
 
 template<typename T>
-Array<T>::Array(void) {
-	
-}
+Array<T>::Array(void): data(NULL), size(0){}
 
 template<typename T>
-Array<T>::Array(unsigned int n) {
+Array<T>::Array(unsigned int n): data(NULL), size(0){
+	if (n == 0)
+		return;
+	data = new T[n]();
+	size = n;
+	for (int i = 0; i < n; i++)
+		data[i] = 0;
 }
 
 template<typename T>
@@ -18,6 +22,7 @@ Array<T>::Array(const Array &src) {
 
 template<typename T>
 Array<T>::~Array(void) {
+	delete[] data;
 }
 
 template<typename T>

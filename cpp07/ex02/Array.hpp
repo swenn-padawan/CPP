@@ -9,7 +9,7 @@ class Array{
 		Array &operator=(const Array &src);
 		~Array();
 	private:
-		T	array;		
+		T	*array;		
 		
 		
 };
