@@ -1,0 +1,32 @@
+#pragma once
+
+#include <stdint.h>
+#include <vector>
+#include <stdlib.h>
+#include <iostream>
+#include <time.h>
+#include <algorithm>
+
+class Span{
+	public:
+		Span();
+		Span(unsigned int n);
+		~Span();
+		Span &operator=(const Span& copy);
+		Span(const Span& src);
+		void	addNumber(int nb);
+		uint64_t	getSize() const;
+		std::vector<int>	getData() const;
+		int 	shortestSpan();
+		int 	longestSpan();
+	private:
+		uint64_t			_size;
+		std::vector<int>	_data;
+};
+
+std::ostream & operator << (std::ostream & ostream, const Span& toPrint);
+
+# define EXCEPTION(n, m)	class n:public std::exception { inline const char *what() const throw() { return (m) ; } ; }
+
+EXCEPTION(noNumberFound, "There's no number to do the calculations");
+EXCEPTION(oneNumberFound, "There's only one number");
