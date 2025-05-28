@@ -26,7 +26,3 @@ class Span{
 
 std::ostream & operator << (std::ostream & ostream, const Span& toPrint);
 
-# define EXCEPTION(n, m)	class n:public std::exception { inline const char *what() const throw() { return (m) ; } ; }
-
-EXCEPTION(noNumberFound, "There's no number to do the calculations");
-EXCEPTION(oneNumberFound, "There's only one number");
