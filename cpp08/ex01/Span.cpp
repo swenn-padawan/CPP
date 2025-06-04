@@ -39,6 +39,14 @@ void Span::addNumber(int nb) {
 	_data.push_back(nb);
 }
 
+void Span::addNumber(std::vector<int>::const_iterator start,
+		std::vector<int>::const_iterator end)
+{
+    if (std::distance(start, end) + _data.size() > _size)
+        throw std::runtime_error("no slot left");
+    _data.insert(_data.end(), start, end);
+}
+
 std::ostream &operator<<(std::ostream &os, const Span& toPrint) {
 	std::vector<int> data = toPrint.getData();
 	for (std::vector<int>::size_type i = 0; i < data.size(); ++i) {

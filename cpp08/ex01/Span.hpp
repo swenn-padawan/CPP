@@ -15,6 +15,8 @@ class Span{
 		Span &operator=(const Span& copy);
 		Span(const Span& src);
 		void	addNumber(int nb);
+		void addNumber(std::vector<int>::const_iterator begin,
+			std::vector<int>::const_iterator end);
 		uint64_t	getSize() const;
 		std::vector<int>	getData() const;
 		int 	shortestSpan();
