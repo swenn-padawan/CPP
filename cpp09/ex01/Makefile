@@ -1,3 +1,6 @@
 NAME	:=	RPN
 
-SRCS	:=	RPN.cpp
+SRCS	:=	RPN.cpp \
+			main.cpp
+
+include ../ex00/Makefile
