@@ -17,7 +17,7 @@ double timeSort(const Container& container, Container &sorted)
 	struct timeval end;
 
 	gettimeofday(&start, NULL);
-	sorted = PmergeMe<Container>::fordJohnsonSort(container);
+	sorted = PmergeMe<Container>::sort(container);
 	gettimeofday(&end, NULL);
 
 	double start_us = start.tv_sec * 1e6 + start.tv_usec;
